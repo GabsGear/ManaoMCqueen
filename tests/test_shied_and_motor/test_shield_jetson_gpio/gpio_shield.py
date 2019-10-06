@@ -71,10 +71,10 @@ import time
 import RPi.GPIO as GPIO # gpio rpi
 
 LEFT_PIN_MOTOR_FORWARD = 12
+RIGHT_PIN_MOTOR_FORWARD = 5
+s
 LEFT_PIN_MOTOR_BACKWARD = 13
-
-RIGHT_PIN_MOTOR_FORWARD = 15
-RIGHT_PIN_MOTOR_BACKWARD = 16
+RIGHT_PIN_MOTOR_BACKWARD = 6
 
 forward_ports = [LEFT_PIN_MOTOR_FORWARD, RIGHT_PIN_MOTOR_FORWARD]
 backward_ports = [RIGHT_PIN_MOTOR_BACKWARD, LEFT_PIN_MOTOR_BACKWARD]
@@ -93,6 +93,7 @@ def walk_forward():
 def walk_backward():
     for port in backward_ports:
         GPIO.output(port, GPIO.HIGH) 
+
 
 def stop():
     for port in all_motor_ports:
